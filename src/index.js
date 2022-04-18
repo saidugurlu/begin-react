@@ -12,16 +12,19 @@ import ReactDOM from "react-dom";
 //   }
 // }
 // ReactDOM.render(<App2 />, document.getElementById("root2"));
-const names = ["Ali ", "Ebruli", "Veli"];
+// const names = ["Ali ", "Ebruli", "Veli"];
+// const str1= "click "
+// const str2= "me "
+// function App() {
+//   return (
+//     <div>
+//       {names.map((name) => (
+//         <h1 className="aramsam" style={{color: "red", backgroundColor: "Green"}} >{name}</h1>
+//       ))}
 
-function App() {
-  return (
-    <div>
-      {names.map((name) => (
-        <h1 className="aramsam" style={{color: "red", backgroundColor: "Green"}} >{name}</h1>
-      ))}
-    </div>
-  );
-}
+//       <button className = "btn btn-primary">{str1.concat(str2)}</button>
+//     </div>
+//   );
+// }
 
 ReactDOM.render(<App />, document.getElementById("root"));
