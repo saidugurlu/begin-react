@@ -1,5 +1,7 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import Card from "./components/card";
+import Collapse from "./components/collapse";
 // function App() {
 //   return <h1>Benim adim Ebruli</h1>;
 // }
@@ -25,20 +27,49 @@ import ReactDOM from 'react-dom/client';
 //     </div>
 //   );
 // }
-import Card from "./components/card";
+
 const App = () => {
   return (
-    <div>
-      <div className="card-group">
-        <Card cardTitle="Said Ugurlu" />
-        <Card cardTitle="Vera Ugurlu" />
-        <Card cardTitle="Süheyla Ugurlu" />
+    <div className="container">
+      <div className="card-group row">
+        <div className="col">
+          <Collapse href="collapseExample1">
+            <Card
+              // cardTitle="Said Ugurlu"
+              cardText="Lorem Upsum Text I"
+              updatedTime="Last updated 2 mins ago"
+              image="https://picsum.photos/200/300?grayscale"
+            />
+          </Collapse>
+        </div>
+        <div className="col">
+          <Collapse href="collapseExample2">
+            <Card
+              cardTitle="Vera Ugurlu"
+              cardText="Lorem Upsum Text II"
+              updatedTime="Last updated 1 mins ago"
+              image="https://picsum.photos/200/300"
+            />
+          </Collapse>
+        </div>
+        <div className="col">
+
+       
+        <Collapse  href="collapseExample3">
+          <Card
+            cardTitle="Süheyla Ugurlu"
+            cardText="Lorem Upsum Text III"
+            updatedTime="Last updated 5 mins ago"
+            image="https://picsum.photos/seed/picsum/200/300"
+          />
+        </Collapse>
+        </div>
       </div>
     </div>
   );
 };
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
